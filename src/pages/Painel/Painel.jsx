@@ -1,8 +1,6 @@
-// Painel.jsx ATUALIZADO
-
 import "./Painel.style.scss";
 import Header from "../../components/headerComponent/HeaderComponent";
-import Sidebar from "../../components/Sidebar/Sidebar.jsx"; // <-- IMPORTA A NOVA SIDEBAR
+import Sidebar from "../../components/Sidebar/Sidebar.jsx";
 
 function Painel() {
   return (

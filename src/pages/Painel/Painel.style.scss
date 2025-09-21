@@ -1,9 +1,7 @@
-// Painel.style.scss
-
 .painel-layout {
   display: flex;
   min-height: 100vh;
-  background-color: #F3F4F6; // <-- ESTE É O FUNDO CINZA QUE DEVE APARECER NAS BORDAS
+  background-color: #F3F4F6;
 }
 
 .main-content {
@@ -12,21 +10,18 @@
   flex-direction: column;
 }
 
-// Em Painel.style.scss
-
 .content-area {
   padding: 2rem;
   background-color: #FFFFFF;
-   border-radius: 0 0 12px 12px;
+  border-radius: 0 0 12px 12px;
   flex: 1;
   margin: 0;
-}
 
-h1 {
-  font-family: 'Poppins', sans-serif;
-font-weight: 500;
-font-size: 18px;
-line-height: 23px;
-letter-spacing: 0.5px;
-
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.5px;
+  }
 }
