@@ -1,13 +1,10 @@
-// src/pages/Produtos/Products.jsx
-
 import { useState, useEffect } from 'react';
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/headerComponent/HeaderComponent";
 import "./Products.style.scss";
-import { api } from '../../api'; // Importa sua API configurada
+import { api } from '../../api';
 import { FaPencilAlt, FaTrash, FaEllipsisV } from 'react-icons/fa';
 
-// Função para buscar dados da sua API real
 const fetchProductsFromAPI = async () => {
   const response = await api.get('/products');
   return response.data;
@@ -35,7 +32,6 @@ function Products() {
     getProducts();
   }, []);
 
-  // Função para formatar a data que vem da API (ex: "2025-11-01T...") para "dd/mm/aaaa"
   const formatDate = (dateString) => {
     if (!dateString) return 'N/A';
     const date = new Date(dateString);
@@ -50,7 +46,6 @@ function Products() {
         <main className="content-area">
           <div className="page-header">
             <h1>Produtos</h1>
-            {/* O botão de adicionar foi removido, como no novo design */}
           </div>
           
           <div className="page-content">
@@ -58,16 +53,15 @@ function Products() {
             {error && <p className="error-message">{error}</p>}
             {!loading && !error && (
               <table className="products-table">
-
-<thead>
-  <tr>
-    <th className="col-nome">Nome</th>
-    <th className="col-marca">Marca</th>
-    <th className="col-preco">Preço</th>
-    <th className="col-validade">Validade</th>
-    <th className="col-acoes"></th> {/* Coluna de ações */}
-  </tr>
-</thead>
+                <thead>
+                  <tr>
+                    <th className="col-nome">Nome</th>
+                    <th className="col-marca">Marca</th>
+                    <th className="col-preco">Preço</th>
+                    <th className="col-validade">Validade</th>
+                    <th className="col-acoes"></th>
+                  </tr>
+                </thead>
                 <tbody>
                   {products.map((product) => (
                     <tr key={product.id}>

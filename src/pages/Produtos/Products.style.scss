@@ -1,90 +1,80 @@
-// src/pages/Produtos/Products.style.scss
-// No topo de Products.style.scss
-// No topo de Products.style.scss
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-
-// ... (o resto do seu código .page-header, etc.)
 
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  // AJUSTES DE ALINHAMENTO
-  margin-top: 1rem;    // NOVO: Adiciona um espaço em cima, "baixando" o título
-  margin-bottom: 1.5rem; // AJUSTADO: Diminui o espaço embaixo, aproximando da tabela
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 
   h1 {
-    font-family: 'Poppins' sans-serif;
-font-weight: 500;
-font-size: 20px;;
-line-height: 23px;
-letter-spacing: 0.5px;
-
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.5px;
   }
 }
 
 .page-content {
   .products-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed; // Mantenha isso, é crucial
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
 
-  // Regra geral para bordas e espaçamento
-  th, td {
-    border: 1px solid #EEF1F4;
-    padding: 1rem 1.5rem;
-    text-align: left;
-    vertical-align: middle;
-  }
-  
-  // --- DEFINIÇÃO DAS LARGURAS DAS COLUNAS ---
-  // Aplicamos as larguras aos cabeçalhos, e o table-layout: fixed força o resto a seguir.
-  thead th {
-    background-color: #EEF1F4;
-    font-family: Inter;
-font-weight: 700;
-font-style: Bold;
-font-size: 15px;
-line-height: 100%;
-letter-spacing: 0%;
-
+    th, td {
+      border: 1px solid #EEF1F4;
+      padding: 1rem 1.5rem;
+      text-align: left;
+      vertical-align: middle;
+    }
     
-    // As larguras que você quer:
-    &.col-nome     { width: 35%; }
-    &.col-marca    { width: 25%; }
-    &.col-preco    { width: 10%; }
-    &.col-validade { width: 15%; }
-    &.col-acoes    { width: 8%; } // <-- A coluna que queríamos diminuir
-  }
+    thead th {
+      background-color: #EEF1F4;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0%;
 
-  tbody {
-    tr:hover {
-      background-color: #F9FAFB;
+      &.col-nome     { width: 35%; }
+      &.col-marca    { width: 25%; }
+      &.col-preco    { width: 10%; }
+      &.col-validade { width: 15%; }
+      &.col-acoes    { width: 8%; }
     }
 
-    td {
-      font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 13px;
-line-height: 100%;
-letter-spacing: 0%;
+    tbody {
+      tr:hover {
+        background-color: #F9FAFB;
+      }
 
+      td {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .action-btn {
+      background: none;
+      border: none;
+      color: #9CA3AF;
+      padding: 0;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.2s;
+      &:hover {
+        color: #374151;
+      }
     }
   }
-
-  .action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .action-btn {
-    background: none; border: none; color: #9CA3AF;
-    padding: 0; font-size: 1rem; cursor: pointer;
-    transition: color 0.2s;
-    &:hover { color: #374151; }
-  }
-}
 }
