@@ -2,7 +2,7 @@ import { api } from "../api";
 
 export async function loginAndGetUser({ email, password }) {
   const { data } = await api.post("/login", { email, password });
-  const token = data.acessToken;
+  const token = data.accessToken;
   const partialUser = data.user || {};
 
   localStorage.setItem("token", token);
